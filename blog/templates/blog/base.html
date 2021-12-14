@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>{% block tittle %}{% endblock %}</title>
+    <meta charset="utf-8" />
+    <link href="{% static 'css/blog.css' %}" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/bb8a9a4ef6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="logoContainer"><h1>Dunkhein</h1></div>
+      <div class="createdBy">
+        <h3>Desenvolvido por Juliano Xavier Zyczycki</h3>
+      </div>
+    </header>
+  </body>
+  <section id="welcome">
+    <div class="welcomeContainer">
+      <h3>Bem vindo ao Dunkhein</h3>
+      <h4>Um blog sobre programação e Filosofia</h4>
+    </div>
+    <div class="mainImageContainer">
+      <img src="{% static 'images/Main.jpg' %}" alt="My image" />
+      <div class="contactContianer">
+        <div class="contactInfo">
+          <h3>Informações para contato:</h3>
+          <div class="twitter">
+            <i class="fa fa-twitter"></i>
+            <a target="_blank" href="https://twitter.com/zyckizera ">Twitter</a>
+          </div>
+          <div class="git">
+            <i class="fa fa-github"> </i>
+            <a target="_blank" href="https://github.com/zycki-gif">GitHub</a>
+          </div>
+          <div class="linkedin">
+            <i class="fa fa-linkedin"></i>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/juliano-xavier-06a0b3161/"
+              >LinkeDin</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="topics">
+    <div class="topicsContainer">
+      <div class="development">
+        <i class="fa fa-code"></i>
+        <h4>Artigos sobre Programação</h4>
+      </div>
+      <div class="philosofy">
+        <i class="fa fa-strikethrough"></i>
+        <h4>Artigos sobre Filosofia</h4>
+      </div>
+      <div class="opinion">
+        <i class="fa fa-quote-right" aria-hidden="true"></i>
+        <h4>Artigos de Opiniões</h4>
+      </div>
+    </div>
+  </section>
+  <section id="articles">
+    <div class="articlesContainer">
+    {% block content %}
+      
+      <div class="articlesContent">
+      
+    {% endblock %}
+        </div>
+    </div>
+  </section>
+
+  <footer></footer>
+</html>

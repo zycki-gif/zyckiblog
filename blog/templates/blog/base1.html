@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>{% block tittle %}{% endblock %}</title>
+    <link href="{% static 'css/blog.css' %}" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+     <div class="LogoContainer">
+      <h1>DunkHein</h1>
+    </div>
+    <div class="CreatedBy">
+    <p>Criado por Juliano Xavier Zyczycki</p></div>
+    </header>
+    <main>
+    {% block content %}
+    
+    {% endblock %}
+    </main>
+</html>
